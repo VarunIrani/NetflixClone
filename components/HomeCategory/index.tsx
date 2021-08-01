@@ -20,6 +20,7 @@ const HomeCategory = (props: HomeCategoryProps) => {
 		<View style={styles.container}>
 			<Text style={styles.title}>{category.title}</Text>
 			<FlatList horizontal={true} data={category.movies}
+								showsHorizontalScrollIndicator={false}
 								renderItem={({item}) => <Image source={{uri: item.poster}} style={styles.image}/>}/>
 		</View>
 	);

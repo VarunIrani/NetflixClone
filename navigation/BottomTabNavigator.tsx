@@ -11,6 +11,7 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import HomeScreen from '../screens/HomeScreen';
+import MovieDetailsScreen from "../screens/MovieDetailsScreen";
 import TabTwoScreen from '../screens/TabTwoScreen';
 import {BottomTabParamList, HomeScreenParamList, TabTwoParamList} from '../types';
 
@@ -62,6 +63,11 @@ const HomeScreenStack = createStackNavigator<HomeScreenParamList>();
 function HomeNavigator() {
 	return (
 		<HomeScreenStack.Navigator>
+			<HomeScreenStack.Screen
+				name="MovieDetailsScreen"
+				component={MovieDetailsScreen}
+				options={{title: ''}}
+			/>
 			<HomeScreenStack.Screen
 				name="HomeScreen"
 				component={HomeScreen}

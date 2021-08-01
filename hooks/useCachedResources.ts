@@ -15,7 +15,9 @@ export default function useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...Ionicons.font,
-          'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+          'netflix-sans': require('../assets/fonts/NetflixSansRegular.ttf'),
+          'netflix-sans-bold': require('../assets/fonts/NetflixSansBold.ttf'),
+          'netflix-sans-medium': require('../assets/fonts/NetflixSansMedium.ttf'),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -25,7 +27,6 @@ export default function useCachedResources() {
         await SplashScreen.hideAsync();
       }
     }
-
     loadResourcesAndDataAsync();
   }, []);
 
