@@ -64,14 +64,14 @@ function HomeNavigator() {
 	return (
 		<HomeScreenStack.Navigator>
 			<HomeScreenStack.Screen
-				name="MovieDetailsScreen"
-				component={MovieDetailsScreen}
-				options={{title: ''}}
-			/>
-			<HomeScreenStack.Screen
 				name="HomeScreen"
 				component={HomeScreen}
 				options={{headerShown: false}}
+			/>
+			<HomeScreenStack.Screen
+				name="MovieDetailsScreen"
+				component={MovieDetailsScreen}
+				options={{title: ''}}
 			/>
 		</HomeScreenStack.Navigator>
 	);
